@@ -58,3 +58,11 @@ angularMovieApp.controller("moviesController" ,function ($scope) {
     ];
 
 });
+
+angularMovieApp.controller("movieFormController" ,function ($scope) {
+
+    $scope.addMovie = function(){
+
+    };
+
+});
