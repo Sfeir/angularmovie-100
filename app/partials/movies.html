@@ -4,6 +4,16 @@
     </h1>
 </header>
 
+<!-- barre d'actions -->
+<section class="well form-inline">
+    <input class="span5" type="text" ng-model="search" placeholder="Rechercher">
+    <section class="pull-right">
+        <button class="btn btn-info" ng-click="tri = 'releaseYear'; reverse = !reverse">Trier par année</button>
+        <button class="btn btn-info" ng-click="tri = 'title'; reverse = !reverse">Trier par titre</button>
+    </section>
+</section>
+
+
 <ul class="thumbnails">
     <li ng-repeat="movie in movies" class="span12">
         <img ng-src="{{movie.poster}}" class="span2">
