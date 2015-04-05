@@ -12,6 +12,12 @@ angularMovieApp.controller("moviesController" ,function ($scope, $http) {
         $scope.movies = resp;
     });
 
+    $scope.deleteMovie = function(index){
+        $http.delete('/server/api/movies/' + $scope.movies[index].id)
+            .success(function(resp){
+                $scope.movies.splice(index, 1);
+            });
+    };
 });
 
 angularMovieApp.controller("movieFormController" ,function ($scope, $http) {
